@@ -3,7 +3,7 @@ import React from "react";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 
-import Welcome from "./screens/Welcome";
+import RootStack from "./navigators/RootStack";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -15,5 +15,5 @@ export default function App() {
     return <AppLoading />;
   }
 
-  return <Welcome />;
+  return <RootStack />;
 }
