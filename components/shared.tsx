@@ -5,7 +5,7 @@ import { colors } from "./colors";
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  background-color: ${colors.blackCoral};
+  background-color: ${colors.bgPrimary};
 `;
 
 export const ScreenWidth = Dimensions.get("screen").width;

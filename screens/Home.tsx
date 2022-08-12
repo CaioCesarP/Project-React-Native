@@ -7,7 +7,7 @@ import { colors } from "../components/colors";
 import { Container } from "../components/shared";
 
 const HomeContainer = styled(Container)`
-  background-color: ${colors.heliotropeGray};
+  background-color: ${colors.bgPrimary};
   width: 100%;
   flex: 1;
 `;

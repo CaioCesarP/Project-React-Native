@@ -4,6 +4,7 @@ export const colors = {
   primary: "#EF835D",
   secondary: "#2C365A",
   tertiary: "#85C6D8",
-  thistle: "#DDBDD5",
-  heliotropeGray: "#AC9FBB",
+  bgPrimary: "#14213d",
+  bgSecondary: "#fca311",
+  headerText: "#e5e5e5",
 };

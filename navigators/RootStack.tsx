@@ -1,6 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { colors } from "../components/colors";
 
+import Avi from "../assets/avi/avatar.png";
+
+import Greeting from "../components/Header/Greating/Greeting";
+import Profile from "../components/Header/Profile/Profile";
+
 import Welcome from "../screens/Welcome";
 import Home from "../screens/Home";
 
@@ -20,14 +25,23 @@ const RootStack: FunctionComponent = () => {
       <Stack.Navigator
         screenOptions={{
           headerStyle: {
-            backgroundColor: colors.thistle,
+            backgroundColor: colors.bgSecondary,
             shadowColor: colors.black,
             borderBottomWidth: 0.5,
             shadowOpacity: 90,
             elevation: 0,
             height: 120,
           },
-          headerTintColor: colors.secondary
+          headerTintColor: colors.headerText,
+          headerRight: () => (
+            <Profile
+              img={Avi}
+              imgContainerStyle={{
+                backgroundColor: colors.tertiary,
+                right: 10,
+              }}
+            />
+          ),
         }}
         initialRouteName="Home"
       >
@@ -36,7 +50,20 @@ const RootStack: FunctionComponent = () => {
           component={Welcome}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            headerTitle: (props) => (
+              <Greeting
+                mainTitle="Oie Caio!"
+                subText="Welcome Back"
+                {...props}
+              />
+            ),
+            headerLeft: () => <></>,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
