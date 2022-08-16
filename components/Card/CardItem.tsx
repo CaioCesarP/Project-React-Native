@@ -13,9 +13,9 @@ import { CardProps } from "./types";
 import { View } from "react-native";
 
 const CardBackground = styled.ImageBackground`
-  height: 75%;
+  height: 100%;
   width: ${ScreenWidth * 0.76}px;
-  resize-mode: cover;
+  resize-mode: contain;
   background-color: ${colors.bgSecondary};
   border-radius: 25px;
   margin-right: 25px;
