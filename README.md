@@ -169,7 +169,55 @@ Utilizado o [TransactionAvi](#transactionavi).
 
 Utilizado o [TransactionItem](#transacationitem).
 
-##### Rodando projeto
+### SendMoney
+
+Envio de dinheiro, exibe opção para adicionar novo recebedor, card de pessoa com nome, valor para enviar e imagem do recebedor.
+
+- Props
+
+\* SendMoneyProps \*
+
+> id
+> Necessária, id que do card.
+
+> name
+> Necessária, nome do usuário que vai receber o valor.
+
+> amount
+> Necessária, valor que o usuário vai receber.
+
+> background
+> Necessária, cor de fundo do card.
+
+> img
+> Necessária, foto do usuário.
+
+\* SendMoneySectionProps \*
+
+> data
+> Necessária, array de objetos contendo todas as informações do cartão do cliente.
+
+#### SendMoneySection
+
+Junção de todos os usuários para enviar.
+
+- Costumização
+
+Utilizado o [RegularText](#regulartext) na parte do texto.
+
+Utilizado o [SmallText](#smalltext) na parte do texto.
+
+#### SendMoneyItem
+
+Usuário para envio.
+
+- Costumização
+
+Utilizado o [RegularText](#regulartext) na parte do texto.
+
+Utilizado o [SmallText](#smalltext) na parte do texto.
+
+## Rodando projeto
 
 > Instalando dependências:
 
