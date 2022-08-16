@@ -15,13 +15,18 @@ import CardSection from "../components/Card/CardSection";
 import TransactionSection from "../components/Transactions/TransactionSection";
 import SendMoneySection from "../components/SendMoney/SendMoneySection";
 
+import { RootStackParamList } from "../navigators/RootStack";
+import { StackScreenProps } from "@react-navigation/stack";
+
+export type Props = StackScreenProps<RootStackParamList, "Home">;
+
 const HomeContainer = styled(Container)`
   background-color: ${colors.bgPrimary};
   width: 100%;
   flex: 1;
 `;
 
-const Home = () => {
+const Home: FunctionComponent<Props> = ({ navigation }) => {
   const cardsData = [
     {
       id: 1,

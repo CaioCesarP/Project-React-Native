@@ -1,5 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components/native";
+import { View } from "react-native";
+
+import { useNavigation } from "@react-navigation/native";
 
 import card_bg from "../../assets/bgs/background_transparent.png";
 
@@ -7,10 +10,10 @@ import RegularText from "../Text/RegularText";
 import SmallText from "../Text/SmallText";
 
 import { ScreenWidth } from "../shared";
-
 import { colors } from "../colors";
+
 import { CardProps } from "./types";
-import { View } from "react-native";
+import { Props as HomeProps } from "../../screens/Home";
 
 const CardBackground = styled.ImageBackground`
   height: 100%;
@@ -48,11 +51,15 @@ const Logo = styled.Image`
 `;
 
 const CardItem: FunctionComponent<CardProps> = (props) => {
-  const handlePress = () => {};
+  const navigation = useNavigation<HomeProps["navigation"]>();
+
+  const handlePress = () => {
+    navigation.navigate("Balance", { ...props });
+  };
 
   return (
     <CardBackground source={card_bg}>
-      <CardTouchable underlayColor={colors.secondary} onPress={handlePress}>
+      <CardTouchable underlayColor={colors.secondary} onPress={() => handlePress()}>
         <TouchableView>
           <CardRow>
             <RegularText textStyles={{ color: colors.white }}>

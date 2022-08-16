@@ -19,7 +19,7 @@ const BalanceContainer = styled(Container)`
     flex: 1;
 `;
 
-type Props = StackScreenProps<RootStackParamList, "Balance">;
+export type Props = StackScreenProps<RootStackParamList, "Balance">;
 
 const Balance: FunctionComponent<Props> = ({ route }) => {
   return (
