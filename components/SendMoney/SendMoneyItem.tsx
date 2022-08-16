@@ -38,7 +38,7 @@ const SendMoneyItem: FunctionComponent<SendMoneyProps> = (props) => {
         <RegularText
           textStyles={{ textAlign: "left", color: colors.white, fontSize: 13 }}
         >
-          {props.name}
+          {props.amount}
         </RegularText>
       </>
     </SendMoneyItemContainer>
