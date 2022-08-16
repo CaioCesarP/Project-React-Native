@@ -64,6 +64,48 @@ Utilizado o [SmallText](#smalltext) na parte do texto.
 
 Padding de `10px`, radius de `20px` e um width de `100%`.
 
+### Card
+
+Card do cartão do cliente, exibido saldo, final do cartão e logo do cartão.
+
+- Props
+
+\* CardProps \*
+
+> id
+> Necessária, id que do card.
+
+> accountNo
+> Necessária, número da conta.
+
+> balance
+> Necessária, valor de balanço total da conta.
+
+> alias
+> Optativa, apelido do cartão.
+
+> logo
+> Necessária, logo do cartão, como Visa e MasterCard.
+
+\* CardSectionProps \*
+
+> data
+> Necessária, array de objetos contendo todas as informações do cartão do cliente.
+
+#### CardSection
+
+Recebe a DATA da home, onde é extraido as informações dos cards.
+
+#### CardItem
+
+- Costumização
+
+Utilizado o [RegularText](#regulartext) na parte do texto.
+
+Utilizado o [SmallText](#smalltext) na parte do texto.
+
+Exibição de data.
+
 ##### Rodando projeto
 
 > Instalando dependências:
