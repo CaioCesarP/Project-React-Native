@@ -6,9 +6,10 @@ import masterCardLogo from "../assets/cards/mc.png";
 import visaLogo from "../assets/cards/visa_white.png";
 
 import { colors } from "../components/colors";
-
 import { Container } from "../components/shared";
+
 import CardSection from "../components/Card/CardSection";
+import TransactionSection from "../components/Transactions/TransactionSection";
 
 const HomeContainer = styled(Container)`
   background-color: ${colors.bgPrimary};
@@ -41,10 +42,47 @@ const Home = () => {
     },
   ];
 
+  const transactionData = [
+    {
+      id: 1,
+      amount: "-$86.00",
+      date: "14 Sep 2021",
+      title: "Taxi",
+      subtitle: "Uber Car",
+      art: {
+        background: colors.primary,
+        icon: "car",
+      },
+    },
+    {
+      id: 2,
+      amount: "-$286.00",
+      date: "14 Sep 2021",
+      title: "Shopping",
+      subtitle: "Ali Express",
+      art: {
+        background: colors.tertiary,
+        icon: "cart",
+      },
+    },
+    {
+      id: 3,
+      amount: "-$586.00",
+      date: "14 Sep 2021",
+      title: "Travel",
+      subtitle: "Emirates",
+      art: {
+        background: colors.secondary,
+        icon: "airplane",
+      },
+    },
+  ];
+
   return (
     <HomeContainer>
       <StatusBar style="dark" />
       <CardSection data={cardsData} />
+      <TransactionSection data={transactionData} />
     </HomeContainer>
   );
 };
