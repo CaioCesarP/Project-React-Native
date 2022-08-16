@@ -106,6 +106,69 @@ Utilizado o [SmallText](#smalltext) na parte do texto.
 
 Exibição de data.
 
+### Transaction
+
+Extrato de compra, Exibido em que foi gasto, valor, data e icon refetente.
+
+- Props
+
+\* TransactionProps \*
+
+> id
+> Necessária, id que do card.
+
+> title
+> Necessária, titulo da compra.
+
+> subtitle
+> Necessária, subtitulo da compra.
+
+> amount
+> Necessária, valor da compra.
+
+> date
+> Necessária, data da compra.
+
+> art
+> Necessária, objeto que recebe icon, nome do icon para ser colocado, e background, cor de fundo do icon.
+
+\* TransactionSectionProps \*
+
+> data
+> Necessária, array de objetos contendo todas as informações do cartão do cliente.
+
+\* TransactionAviProps \*
+
+> icon
+> Necessária, nome do icon para ser colocado.
+
+> background
+> Necessária, cor de fundo do icon.
+
+#### TransactionAvi
+
+Icon do extrato.
+
+#### TransacationItem
+
+Item do extrato
+
+- Costumização
+
+Utilizado o [RegularText](#regulartext) na parte do texto.
+
+Utilizado o [SmallText](#smalltext) na parte do texto.
+
+#### TransactionSection
+
+Junção de todos os itens do extrato
+
+- Costumização
+
+Utilizado o [TransactionAvi](#transactionavi).
+
+Utilizado o [TransactionItem](#transacationitem).
+
 ##### Rodando projeto
 
 > Instalando dependências:
