@@ -66,7 +66,7 @@ const TransactionItem: FunctionComponent<TransactionProps> = (props) => {
             marginBottom: 5,
           }}
         >
-          {props.amout}
+          {props.amount}
         </RegularText>
         <SmallText
           textStyles={{
