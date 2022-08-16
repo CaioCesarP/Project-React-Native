@@ -217,6 +217,47 @@ Utilizado o [RegularText](#regulartext) na parte do texto.
 
 Utilizado o [SmallText](#smalltext) na parte do texto.
 
+### Balance
+
+Interno do cartão.
+
+- Props
+
+\* AmountProps \*
+
+> balance
+> Necessária, valor total do cartão.
+
+\* BalanceCardProps \*
+
+> EXTENDIDO PELO `CardProps`.
+
+#### BalanceCardSection
+
+Todo o componente do cartão.
+
+#### BalanceCardItem
+
+O cartão, informações como número da conta e total de dinheiro na conta.
+
+Utilizado o [RegularText](#regulartext) na parte do texto.
+
+Utilizado o [SmallText](#smalltext) na parte do texto.
+
+#### AmountSection
+
+Exibido o total do cartão.
+
+Utilizado o [RegularText](#regulartext) na parte do texto.
+
+Utilizado o [SmallText](#smalltext) na parte do texto.
+
+#### ButtonSection
+
+Botão para se retirar para página Home.
+
+Utilizado o [RegularButton](#regularbutton) na parte do texto.
+
 ## Rodando projeto
 
 > Instalando dependências:
