@@ -4,12 +4,16 @@ import styled from "styled-components/native";
 
 import masterCardLogo from "../assets/cards/mc.png";
 import visaLogo from "../assets/cards/visa_white.png";
+import cobyAndoh from "../assets/portraits/1.jpg";
+import harleenScot from "../assets/portraits/2.jpg";
+import jamesCorbyn from "../assets/portraits/3.jpg";
 
 import { colors } from "../components/colors";
 import { Container } from "../components/shared";
 
 import CardSection from "../components/Card/CardSection";
 import TransactionSection from "../components/Transactions/TransactionSection";
+import SendMoneySection from "../components/SendMoney/SendMoneySection";
 
 const HomeContainer = styled(Container)`
   background-color: ${colors.bgPrimary};
@@ -78,11 +82,36 @@ const Home = () => {
     },
   ];
 
+  const sendMoneyData = [
+    {
+      id: 1,
+      amount: "2450.56",
+      name: "Coby Andoh",
+      background: colors.tertiary,
+      img: cobyAndoh,
+    },
+    {
+      id: 2,
+      amount: "4450.56",
+      name: "Harleen Scot",
+      background: colors.primary,
+      img: harleenScot,
+    },
+    {
+      id: 3,
+      amount: "6250.56",
+      name: "James Corbyn",
+      background: colors.secondary,
+      img: jamesCorbyn,
+    },
+  ];
+
   return (
     <HomeContainer>
       <StatusBar style="dark" />
       <CardSection data={cardsData} />
       <TransactionSection data={transactionData} />
+      <SendMoneySection data={sendMoneyData} />
     </HomeContainer>
   );
 };
